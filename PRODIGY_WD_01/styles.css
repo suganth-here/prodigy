@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    overflow-x: hidden;
+}
+
+nav {
+    background-color: #055a51 ;
+    position: fixed;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.menu-toggle {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    z-index: 1000;
+}
+
+.menu-icon {
+    display: block;
+}
+
+.close-icon {
+    display: none;
+}
+
+.nav-left .navleftitem {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    .nav-left .navleftitem {
+        display: none;
+    }
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; 
+}
+
+nav ul li {
+    margin: 0; 
+    padding: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.5s;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.head {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #009688;
+    color: white;
+}
+
+.head h1 {
+    font-size: 40px;
+    margin-bottom: 20px; 
+}
+
+.head p {
+    font-size: 18px;
+}
+
+.head button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #ff5722;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.head button:hover {
+    background-color: #e64a19;
+}
+
+.about-us, .services, .loan-types, .testimonials, .faq, .contact-form {
+    padding: 50px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.about-us p {
+    font-size: 18px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.service-card, .loan-card, .faq-item {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 300px;
+    display: inline-block;
+    background-color: #009688; 
+    color: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover, .loan-card:hover, .faq-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.testimonials blockquote {
+    font-style: italic;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.contact-form {
+    background-color: white;
+    padding: 50px 20px;
+}
+
+.contact-info {
+    margin-bottom: 30px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.contact-form form {
+    display: inline-block;
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+}
+
+.contact-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #ff5722;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #e64a19;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: -250px; 
+        width: 250px;
+        height: 100%;
+        background-color: rgba(51, 51, 51, 0.9);
+        transition: left 0.3s ease; 
+        z-index: 999; 
+        
+    }
+
+    nav ul.show {
+        left: 0; 
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .close-icon {
+        display: none;
+    }
+
+    .menu-toggle.close .menu-icon {
+        display: none;
+    }
+
+    .menu-toggle.close .close-icon {
+        display: block;
+    }
+
+    nav ul li {
+        margin: 0; 
+    }
+
+    nav ul li a {
+        padding: 15px;
+        display: block;
+        margin: 0; 
+    }
+}
